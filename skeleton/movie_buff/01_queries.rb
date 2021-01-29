@@ -67,6 +67,11 @@ def directed_by_one_of(them)
   Movie.select(:id, :title)
           .joins(:director)
         .where('name in (?)' , ['George Lucas', 'Steven Spielberg'])
+
+        # Movie.select(:id, :title)
+        #   .joins(:director)
+        # .where(actors: {name: them})
+  
 end
 
 def movie_names_before_1940
